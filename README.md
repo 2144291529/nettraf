@@ -28,4 +28,63 @@ sample output:
 |  10K  100M    4K    4M|   2K    6M    7K   79M|
 |   8K   79M    5K    4M|   7K   40M   21K  216M|
 ```
+---
+基于开发者，进行二次编译RPM包，适用于centos7.9，其他版本未测试，理论上不依赖任何依赖包。
+
+## 使用方法
+下载rpm软件包，上传到Centos操作系统中
+yum -y install yum -y install nettraf-master-1.el7.x86_64.rpm
+
+```
+[root@ali-hk x86_64]# yum -y install nettraf-master-1.el7.x86_64.rpm
+Loaded plugins: fastestmirror, getpagespeed
+Examining nettraf-master-1.el7.x86_64.rpm: nettraf-master-1.el7.x86_64
+Marking nettraf-master-1.el7.x86_64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package nettraf.x86_64 0:master-1.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==================================================================================================
+ Package         Arch           Version                Repository                            Size
+==================================================================================================
+Installing:
+ nettraf         x86_64         master-1.el7           /nettraf-master-1.el7.x86_64         0.0  
+
+Transaction Summary
+==================================================================================================
+Install  1 Package
+
+Installed size: 0  
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : nettraf-master-1.el7.x86_64                                                    1/1 
+  Verifying  : nettraf-master-1.el7.x86_64                                                    1/1 
+
+Installed:
+  nettraf.x86_64 0:master-1.el7                                                                   
+
+Complete!
+[root@ali-hk x86_64]# net
+netreport  netstat    nettraf    
+[root@ali-hk x86_64]# nettraf eth0
++-----------------------+
+|         eth0          |
+|      TX         RX    |
+|  PPS   BPS   PPS   BPS|
++-----------------------+
+|   3     3K    3     1K|
+|   4    24K    4     2K|
+|   2     1K    3     1K|
+
+
+```
+
+## 命令
+nettarf 网卡名字
 
