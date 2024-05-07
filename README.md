@@ -33,7 +33,7 @@ sample output:
 
 ## 使用方法
 下载rpm软件包，上传到Centos操作系统中
-yum -y install yum -y install nettraf-master-1.el7.x86_64.rpm
+ yum -y install nettraf-master-1.el7.x86_64.rpm
 
 ```
 [root@ali-hk x86_64]# yum -y install nettraf-master-1.el7.x86_64.rpm
