@@ -1,3 +1,5 @@
+
+基于原开发者，进行二次编译构建RPM包，适用于centos7.9，其他版本未测试，理论上不依赖任何依赖包。
 # nettraf
 
 show NIC traffic stats
